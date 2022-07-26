@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accueil</title>
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/css/owl_carousel.css">
+    <%- include('layouts/head'); -%>
+    <!-- CUSTUM CSS -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/responsive_mobile.css">
+</head>
+<body>
+    <main>
+
+        <%- include('layouts/navbar') -%> 
+
+        <header class="header_home_page">
+            <div class="owl-carousel owl-theme">
+                <div class="slide el-center-box slider-1">
+                    <img class="el-img" src="img/bg/1.jpg" alt="">
+                </div>
+                <div class="slide el-center-box slider-2">
+                    <img class="el-img" src="img/bg/2.jpg" alt="">
+                </div>
+                <div class="slide el-center-box slider-2">
+                    <img class="el-img" src="img/bg/3.webp" alt="">
+                </div>
+            </div>
+        </header>
+
+        <section id="presentation" class="el-center-box">
+            <div class="el-content-area">
+                <h2 class="el-title" data-aos="fade-down" data-aos-duration="1000" data-aos-ease="ease-out">Présentation</h2>
+                <p  data-aos="fade-down" data-aos-duration="1000" data-aos-ease="ease-out">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus pariatur delectus, ipsum dolor esse odit laboriosam ipsa, harum nisi nam molestiae magni optio doloremque soluta velit sint maxime dolorem? Fuga ipsum aperiam vitae! Debitis deserunt quia iusto impedit. Porro blanditiis recusandae quos pariatur? Dignissimos neque quia sint sequi explicabo ad?
+                </p>
+            </div>
+        </section>
+
+        <section id="prestations">
+            <div class="el-content-area">
+
+                <h2 class="el-title" data-aos="fade-right" data-aos-duration="1000" data-aos-ease="ease-out">Prestations services</h2>
+
+                <div class="grid-prestations">
+                    <a href=""  data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease-out"
+                    title="Immatriculation, CNIE , Passeport, Laissez-passer, Apostille, Légalisation/Certification, Permis de conduire, Casier judiciaire,...">
+                        <article class="el-prestation">
+                            <img class="el-img" src="https://source.unsplash.com/random/100×100/?passport" alt="">
+                            <div class="el-details">
+                                <h2>Documents individuels <span></span></h2>
+                                <p>Immatriculation, CNIE , Passeport, Laissez-passer, Apostille, Légalisation/Certification, Permis de conduire, Casier judiciaire,...</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-ease="ease-out"
+                    title="Livret de famille, Naissance, Décès, Mariage, Divorce, Nationalité, Extraits et Attestations,...">
+                        <article class="el-prestation">
+                            <img class="el-img" src="https://source.unsplash.com/random/100×100/?family" alt="">
+                            <div class="el-details">
+                                <h2>Famille & Mariage<span></span></h2>
+                                <p>Livret de famille, Naissance, Décès, Mariage, Divorce, Nationalité, Extraits et Attestations,...</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-ease="ease-out"
+                    title="Retour définitif, Admission temporaire, Abattement, Dons humanitaires, Introduction des animaux,...">
+                        <article class="el-prestation">
+                            <img class="el-img" src="https://source.unsplash.com/random/100×100/?police" alt="">
+                            <div class="el-details">
+                                <h2>Facilités douanières <span></span></h2>
+                                <p>Retour définitif, Admission temporaire, Abattement, Dons humanitaires, Introduction des animaux,...</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-ease="ease-out"
+                    title="Visa Touristique, Visa étudiant, Visa affaires…">
+                        <article class="el-prestation">
+                            <img class="el-img" src="https://source.unsplash.com/random/100×100/?visa" alt="">
+                            <div class="el-details">
+                                <h2>Visitez la RD Congo <span></span></h2>
+                                <p>Visa Touristique, Visa étudiant, Visa affaires…</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="nouvelles">
+            <div class="el-content-area">
+
+                <h2 class="el-title"  data-aos="fade-left" data-aos-duration="1000" data-aos-ease="ease-out">Nouvelles importantes</h2>
+                <div class="grid-el-nouvelles">
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?pizza" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Interpellation du conseillé de sécurité</h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?security" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Discoure du roi et ses souhaits pour 2022</h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?school" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Interpellation du conseillé de sécurité </h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?boy" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Discoure du roi et ses souhaits pour 2022 </h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?gerl" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Interpellation du conseillé de sécurité</h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href=""  data-aos="zoom-in" data-aos-duration="1000" data-aos-ease="ease-out">
+                        <article class="nouvelle">
+                            <div class="boxImage">
+                                <img class="el-img" src="https://source.unsplash.com/random/100×100/?friend" alt="">
+                            </div>
+                            <div class="details">
+                                <p class="el-date">01/02/2022</p>
+                                <h3 class="el-intitule">Interpellation du conseillé de sécurité </h3>
+                                <p class="el-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab vitae doloribus voluptas amet! Nemo accusantium voluptates totam repudiandae recusandae accusamus molestiae aliquam quia, at sed sit consequuntur dolorum deleniti.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="el-pagination el-center-box">
+                    <div class="el-controls">
+                        <button class="el-btn-circle" data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease-out">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                        <button class="el-btn-circle el-bg-danger" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-ease="ease-out" disabled>
+                            2
+                        </button>
+                        <button class="el-btn-circle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-ease="ease-out">
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <%- include('layouts/footer') -%> 
+    </main>
+    <%- include('layouts/scripts') -%> 
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- ALL SLIDERS -->
+    <script src="/js/slide_header.js"></script>
+</body>
+</html>

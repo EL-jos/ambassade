@@ -1,0 +1,22 @@
+<nav>
+    <img src="/img/logo.svg" alt="logo devises dela RDConog">
+    <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/about">Sommes-nous ?</a></li>
+        <li><a href="/e-services">e-services</a></li>
+        <% if(ressortissant) { %>
+            <li><a href="/mon-compte">Mon compte</a></li>
+        <% } %>
+        <% if(!ressortissant) { %>
+            <li><a href="/enregistrement">S'enregistrer</a></li>
+        
+            <li><a href="/identification">S'identifier</a></li>
+        <% } %>
+        <% if(ressortissant) { %>
+            <li><a href="/deconnexion">Déconnexion</a></li>
+        <% } %>
+    </ul>
+    <button id="el-open-menu">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>

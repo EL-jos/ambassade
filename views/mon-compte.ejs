@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mon compte</title>
+    <%- include('layouts/head') -%> 
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/responsive_mobile.css">
+</head>
+<body>
+    <main>
+        <%- include('layouts/navbar') -%> 
+
+        <header class="header">
+            <h1>Mon compte.</h1>
+        </header>
+
+        <section id="mon-compte">
+            <div class="el-content-area">
+                <form>
+                    <div class="el-profile">
+                        <div class="el-photo">
+                            <img class="el-img" src="http://localhost:4000<%= ressortissant.photo %>" alt="">
+                            <div class="el-change-photo el-center-box">
+                                <i class="fa fa-camera"></i>
+                                <input class="el-img" type="file" name="photo" id="photo">
+                            </div>
+                        </div>
+                        <div class="el-datetime">
+                            <h4>Ressortissant congolais au Maroc</h4>
+                            <p>Dernière mise à jour le <%= new Date(ressortissant.lastModification).toLocaleDateString('fr-MA') %></p>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="nom" type="text" value="<%= ressortissant ? ressortissant.nom : "" %>" required>
+                            <label>Nom</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="postnom" type="text" value="<%= ressortissant ? ressortissant.postnom : "" %>" required>
+                            <label>Post-nom</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="prenom" type="text" value="<%= ressortissant ? ressortissant.prenom : "" %>" required>
+                            <label>Prenom</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="telephone" type="tel" value="<%= ressortissant ? ressortissant.telephone : "" %>" required>
+                            <label>Telephone</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="currentAdresse" type="text" value="<%= ressortissant ? ressortissant.currentAdresse : "" %>" required>
+                            <label>Addresse actuelle</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="dateDeNaissance" type="date" value="<%= ressortissant && ressortissant.dateDeNaissance ? new Date(ressortissant.dateDeNaissance).toISOString().split('T')[0] : '' %>" required>
+                            <label for="">Date de naissance</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="lieuDeNaissance" type="text" value="<%= ressortissant ? ressortissant.lieuDeNaissance : '' %>" required>
+                            <label>Lieu de naissance</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" value="<%= ressortissant.nom_sexe %> " required>
+                            <label for="">Sexe</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" value="<%= ressortissant.nom_etatCivil %> " required>
+                            <label for="">Etat-civil</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="nbEnfant" value="<%= ressortissant ? ressortissant.nbEnfant : 0 %>" type="number" required>
+                            <label>Nombre d’enfant</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="profession" value="<%= ressortissant ? ressortissant.profession : '' %>" type="text" required>
+                            <label>Profession</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" value="<%= ressortissant.nom_province %> " required>
+                            <label for="">Province d'origine</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="dmicileEnRDC" value="<%= ressortissant ? ressortissant.dmicileEnRDC : '' %>" type="text" required>
+                            <label>Domicile en RDC</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="nomDuPere" value="<%= ressortissant ? ressortissant.nomDuPere : '' %>" type="text" required>
+                            <label>Nom complet du pere</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="nomDeLaMere" value="<%= ressortissant ? ressortissant.nomDeLaMere : '' %>" type="text" required>
+                            <label>Nom complet du mere</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="passeport" value="<%= ressortissant ? ressortissant.passeport : '' %>" type="text" required>
+                            <label>Nº passeport</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="cinRDC" value="<%= ressortissant ? ressortissant.cinRDC : '' %>" type="text" required>
+                            <label>Nº carte d’identidté de la RDC</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="cinMaroc" value="<%= ressortissant ? ressortissant.cinMaroc : '' %>" type="text" required>
+                            <label>Nºcarte de séjour Marocaine</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input name="dateEntree" id="dateEntree" value="<%= ressortissant && ressortissant.dateEntree ? new Date(ressortissant.dateEntree).toISOString().split('T')[0] : '' %>" type="date" required>
+                            <label for="">Date d'entrée au maroc</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input name="dateSortie" id="dateSortie" value="<%= ressortissant && ressortissant.dateSortie ? new Date(ressortissant.dateSortie).toISOString().split('T')[0] : '' %>" type="date" required>
+                            <label for="">Date de sortie au maroc</label>
+                        </div>
+                    </div>
+                    <!-- <div class="el-controls">
+                        <button type="submit" class="el-btn-submit">Enregister</button>
+                        <button type="button" class="el-btn-button">Modifier</button>
+                    </div> -->
+                    <input type="hidden" name="statut" value="<%= ressortissant ? ressortissant.id_statut : '' %>">
+                </form>
+                <article class="grid-demandes-et-telechargement">
+                    <div class="demander">
+                        <h2>Demander</h2>
+                        <div>
+                            <% for(let i = 0; i < categorieDocuments.length; i++){ %> 
+                                <a href="http://localhost:4000/d/<%= ressortissant.passeport %>/<%= categorieDocuments[i].id %>" id="el-btn-demande-<%= categorieDocuments[i].id %> " class="el-btn-border-only">
+                                    <%= categorieDocuments[i].name %> 
+                                </a>
+                            <% } %> 
+                        </div>
+                    </div>
+                    <span></span>
+                    <div class="telecharger">
+                        <h2>Telecharger</h2>
+                        <div>
+                            <% for(let i = 0; i < categorieDocuments.length; i++){ %> 
+                                <a href="http://localhost:4000/t/<%= ressortissant.passeport %>/<%= categorieDocuments[i].id %>" id="el-btn-telecharge-<%= categorieDocuments[i].id %> " class="el-btn-border-only">
+                                    <%= categorieDocuments[i].name %> 
+                                </a>
+                            <% } %> 
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="discution">
+            <div class="el-content-area">
+                <div class="el-discution-container">
+                    <header>
+                        <div class="el-nom-et-logo">
+                            <div class="logo el-center-box">
+                                <img src="/img/logo.svg" alt="">
+                            </div>
+                            <h2>Ambassade de la RDC</h2>
+                        </div>
+                        <button class="el-btn-button">Prendre un rendez-vous</button>
+                    </header>
+                    <ul class="el-discution-area">
+                        <% for(let i = 0; i < conversations.length; i++){ %>
+                            <li class="el-message <%= ressortissant.passeport === conversations[i].expediteur ? 'el-moi' : '' %>">
+                                <div class="el-photo-auteur">
+                                    <img class="el-img" src= <%= ressortissant.passeport === conversations[i].expediteur ? `${ressortissant.photo}` : "https://source.unsplash.com/random/50×50/?pizza" %> alt="">
+                                </div>
+                                <div class="el-container-message">
+                                    <p><%= conversations[i].contenu %> </p>
+                                    <span class="el-message-date"><%= new Date(conversations[i].envoie).toLocaleDateString("fr-MA") %></span>
+                                </div>
+                            </li>
+                        <% } %>  
+                    </ul>
+                    <div class="el-discution-footer">
+                        <form action="/ressortissant-send-message" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="expediteur" value="<%= ressortissant.passeport %> " readonly>
+                            <textarea name="contenu" id="" required></textarea>
+                            <button type="submit" class="el-btn-circle el-center-box">
+                                <i class="fa fa-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('layouts/footer') -%>
+    </main>
+    <%- include('layouts/scripts') -%> 
+
+    <script>
+        let inputs = document.querySelectorAll(".el-ligne input, .el-ligne select, button[type='submit']");
+        inputs.forEach(input => input.disabled = "disabled");
+
+        document.querySelector("#discution textarea ~ button[type='submit']").disabled = "";
+
+        let params = new URLSearchParams(window.location.search);
+        
+        if(parseInt(params.get('r'))){
+            swal("Demande envoyée", " ", "success");
+        }
+        if(parseInt(params.get('c'))){
+            swal("Connexion réussit", " ", "success");
+        }
+        if(parseInt(params.get('t')) == 0){
+            swal("Echec de téléchargement", "Vous n'avez pas encore ce document", "error");
+        }
+
+        if(parseInt(params.get('s')) == 0){
+            swal("Echec d'envoie", "Une erreur se produite lors de l'envoie de votre message", "error");
+        }
+    </script>
+    <% if (typeof send !== 'undefined' && send === 1){%>
+        <script>
+            swal("Message envoyé", " ", "success");
+        </script>
+    <% }%> 
+</body>
+</html>

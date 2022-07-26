@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Connexion</title>
+    <%- include('layouts/head') -%> 
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/responsive_mobile.css">
+</head>
+<body>
+    <main>
+        <%- include('layouts/navbar') -%> 
+
+        <header class="header">
+            <h1>Identification.</h1>
+        </header>
+
+        <section id="identification">
+            <div class="el-content-area">
+                <div class="el-box">
+                    <form action="/connexion-ressortissant" method="post" enctype="multipart/form-data">
+                        
+                        <div class="el-ligne">
+                            <div class="el-colonne">
+                                <input type="text" name="passeport" required>
+                                <label>Nº passeport</label>
+                            </div>
+                        </div>
+                        <div class="el-controls">
+                            <button type="submit" class="el-btn-submit">Envoyer</button>
+                            <button type="reset" class="el-btn-reset">Annuler</button>
+                        </div>
+                    </form>
+                    <article class="el-illustration el-center-box">
+                        <img src="/img/connexion.svg" alt="">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <%- include('layouts/footer') -%>
+    </main>
+    <%- include('layouts/scripts') -%>
+
+    <% if (typeof erreur !== 'undefined'){ %>
+        <script>
+            
+            swal("Connexion Impossible", "<%= erreur.message %>", "error");
+        </script>
+    <% } %> 
+</body>
+</html>

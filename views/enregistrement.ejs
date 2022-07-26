@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enregistrement</title>
+    <%- include('layouts/head') -%> 
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/responsive_mobile.css">
+</head>
+<body>
+    <main>
+        <%- include('layouts/navbar') -%> 
+
+        <header class="header">
+            <h1>Enregistrement.</h1>
+        </header>
+
+        <section id="enregistrement">
+            <div class="el-content-area">
+                <form action="">
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nom</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Post-nom</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Prenom</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="tel" required>
+                            <label>Telephone</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Addresse actuelle</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="tel" required>
+                            <label>Lieu de naissance</label>
+                        </div>
+                        <div class="el-colonne">
+                            <select name="" id="">
+                                <% for (var i = 0; i < sexes.length; i++) { %>
+                                    <option value="<%= sexes[i].id %>"><%= sexes[i].name %> </option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="el-colonne">
+                            <select name="" id="">
+                                <% for(let i = 0; i < etatCivils.length; i++){ %> 
+                                    <option value="<%= etatCivils[i].id %>"><%= etatCivils[i].name %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="number" required>
+                            <label>Nombre d’enfant</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Profession</label>
+                        </div>
+                        <div class="el-colonne">
+                            <select name="" id="">
+                                <% for(let i = 0; i < provinces.length; i++){ %> 
+                                    <option value="<%= provinces[i].id %>"><%= provinces[i].name %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Domicile en RDC</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nom complet du pere</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nom complet du mere</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nº passeport</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nº carte d’identidté de la RDC</label>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="text" required>
+                            <label>Nºcarte de séjour Marocaine</label>
+                        </div>
+                    </div>
+                    <div class="el-ligne">
+                        <div class="el-colonne">
+                            <input type="date" required>
+                        </div>
+                        <div class="el-colonne">
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="el-controls">
+                        <button type="submit" class="el-btn-submit">Envoyer</button>
+                        <button type="reset" class="el-btn-reset">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <%- include('layouts/footer') -%>
+    </main>
+    <%- include('layouts/scripts') -%> 
+</body>
+</html>

@@ -1,0 +1,35 @@
+@keyframes fullWidth {
+    0%{
+        width: 0;
+        opacity: 0;
+    }100%{
+        width: calc(100% + 1em);
+        opacity: 1;
+    }
+}
+
+@keyframes noFullWidth {
+    0%{
+        width: calc(100% + 1em);
+        opacity: 1;
+    }100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fullHeight {
+    0%{
+        bottom: -80%;
+    }100%{
+        bottom: 0;
+    }
+}
+
+@keyframes noFullHeight {
+    0%{
+        bottom: 0;
+    }100%{
+        bottom: -80%;
+    }
+}
